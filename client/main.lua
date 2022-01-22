@@ -9,289 +9,127 @@ local PlayerData = {}
 local previousSkinData = {}
 
 local skinData = {
-    ["face"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["face2"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["facemix"] = {
-        skinMix = 0,
-        shapeMix = 0,
-        defaultSkinMix = 0.0,
-        defaultShapeMix = 0.0,
-    },
-    ["pants"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["hair"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
+    ["face"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["pants"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["hair"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
     ["eyebrows"] = {
         item = -1,
         texture = 1,
         defaultItem = -1,
-        defaultTexture = 1,
+        defaultTexture = 1
     },
-    ["beard"] = {
-        item = -1,
-        texture = 1,
-        defaultItem = -1,
-        defaultTexture = 1,
-    },
-    ["blush"] = {
-        item = -1,
-        texture = 1,
-        defaultItem = -1,
-        defaultTexture = 1,
-    },
+    ["beard"] = {item = -1, texture = 1, defaultItem = -1, defaultTexture = 1},
+    ["blush"] = {item = -1, texture = 1, defaultItem = -1, defaultTexture = 1},
     ["lipstick"] = {
         item = -1,
         texture = 1,
         defaultItem = -1,
-        defaultTexture = 1,
+        defaultTexture = 1
     },
-    ["makeup"] = {
-        item = -1,
-        texture = 1,
-        defaultItem = -1,
-        defaultTexture = 1,
-    },
-    ["ageing"] = {
-        item = -1,
-        texture = 0,
-        defaultItem = -1,
-        defaultTexture = 0,
-    },
-    ["arms"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["t-shirt"] = {
-        item = 1,
-        texture = 0,
-        defaultItem = 1,
-        defaultTexture = 0,
-    },
-    ["torso2"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["vest"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["bag"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["shoes"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 1,
-        defaultTexture = 0,
-    },
-    ["mask"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["hat"] = {
-        item = -1,
-        texture = 0,
-        defaultItem = -1,
-        defaultTexture = 0,
-    },
-    ["glass"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["ear"] = {
-        item = -1,
-        texture = 0,
-        defaultItem = -1,
-        defaultTexture = 0,
-    },
-    ["watch"] = {
-        item = -1,
-        texture = 0,
-        defaultItem = -1,
-        defaultTexture = 0,
-    },
+    ["makeup"] = {item = -1, texture = 1, defaultItem = -1, defaultTexture = 1},
+    ["ageing"] = {item = -1, texture = 0, defaultItem = -1, defaultTexture = 0},
+    ["arms"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["t-shirt"] = {item = 1, texture = 0, defaultItem = 1, defaultTexture = 0},
+    ["torso2"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["vest"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["bag"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["shoes"] = {item = 0, texture = 0, defaultItem = 1, defaultTexture = 0},
+    ["mask"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["hat"] = {item = -1, texture = 0, defaultItem = -1, defaultTexture = 0},
+    ["glass"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["ear"] = {item = -1, texture = 0, defaultItem = -1, defaultTexture = 0},
+    ["watch"] = {item = -1, texture = 0, defaultItem = -1, defaultTexture = 0},
     ["bracelet"] = {
         item = -1,
         texture = 0,
         defaultItem = -1,
-        defaultTexture = 0,
+        defaultTexture = 0
     },
-    ["accessory"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["decals"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
+    ["accessory"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["decals"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
     ["eye_color"] = {
         item = -1,
         texture = 0,
         defaultItem = -1,
-        defaultTexture = 0,
+        defaultTexture = 0
     },
-    ["moles"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = -1,
-        defaultTexture = 0,
-    },
-    ["nose_0"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["nose_1"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["nose_2"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["nose_3"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
+    ["moles"] = {item = 0, texture = 0, defaultItem = -1, defaultTexture = 0},
+    ["nose_0"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["nose_1"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["nose_2"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["nose_3"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
 
-    ["nose_4"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["nose_5"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["cheek_1"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["cheek_2"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
-    ["cheek_3"] = {
-        item = 0,
-        texture = 0,
-        defaultItem = 0,
-        defaultTexture = 0,
-    },
+    ["nose_4"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["nose_5"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["cheek_1"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["cheek_2"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
+    ["cheek_3"] = {item = 0, texture = 0, defaultItem = 0, defaultTexture = 0},
     ["eye_opening"] = {
         item = 0,
         texture = 0,
         defaultItem = 0,
-        defaultTexture = 0,
+        defaultTexture = 0
     },
     ["lips_thickness"] = {
         item = 0,
         texture = 0,
         defaultItem = 0,
-        defaultTexture = 0,
+        defaultTexture = 0
     },
     ["jaw_bone_width"] = {
         item = 0,
         texture = 0,
         defaultItem = 0,
-        defaultTexture = 0,
+        defaultTexture = 0
     },
     ["eyebrown_high"] = {
         item = 0,
         texture = 0,
         defaultItem = 0,
-        defaultTexture = 0,
+        defaultTexture = 0
     },
     ["eyebrown_forward"] = {
         item = 0,
         texture = 0,
         defaultItem = 0,
-        defaultTexture = 0,
+        defaultTexture = 0
     },
     ["jaw_bone_back_lenght"] = {
         item = 0,
         texture = 0,
         defaultItem = 0,
-        defaultTexture = 0,
+        defaultTexture = 0
     },
     ["chimp_bone_lowering"] = {
         item = 0,
         texture = 0,
         defaultItem = 0,
-        defaultTexture = 0,
+        defaultTexture = 0
     },
     ["chimp_bone_lenght"] = {
         item = 0,
         texture = 0,
         defaultItem = 0,
-        defaultTexture = 0,
+        defaultTexture = 0
     },
     ["chimp_bone_width"] = {
         item = 0,
         texture = 0,
         defaultItem = 0,
-        defaultTexture = 0,
+        defaultTexture = 0
     },
     ["chimp_hole"] = {
         item = 0,
         texture = 0,
         defaultItem = 0,
-        defaultTexture = 0,
+        defaultTexture = 0
     },
     ["neck_thikness"] = {
         item = 0,
         texture = 0,
         defaultItem = 0,
-        defaultTexture = 0,
-    },
+        defaultTexture = 0
+    }
 }
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
@@ -301,12 +139,11 @@ AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
 end)
 
 RegisterNetEvent('QBCore:Client:OnJobUpdate')
-AddEventHandler('QBCore:Client:OnJobUpdate', function(JobInfo)
-    PlayerData.job = JobInfo
-end)
+AddEventHandler('QBCore:Client:OnJobUpdate',
+                function(JobInfo) PlayerData.job = JobInfo end)
 
 function DrawText3Ds(x, y, z, text)
-	SetTextScale(0.35, 0.35)
+    SetTextScale(0.35, 0.35)
     SetTextFont(4)
     SetTextProportional(1)
     SetTextColour(255, 255, 255, 215)
@@ -316,7 +153,7 @@ function DrawText3Ds(x, y, z, text)
     SetDrawOrigin(x, y, z, 0)
     DrawText(0.0, 0.0)
     local factor = (string.len(text)) / 370
-    DrawRect(0.0, 0.0+0.0125, 0.017+ factor, 0.03, 0, 0, 0, 75)
+    DrawRect(0.0, 0.0 + 0.0125, 0.017 + factor, 0.03, 0, 0, 0, 75)
     ClearDrawOrigin()
 end
 
@@ -330,12 +167,12 @@ function GetPositionByRelativeHeading(ped, head, dist)
 end
 
 Citizen.CreateThread(function()
-    for k, v in pairs (Config.Stores) do
+    for k, v in pairs(Config.Stores) do
         if Config.Stores[k].shopType == "clothing" then
             local clothingShop = AddBlipForCoord(Config.Stores[k].coords)
             SetBlipSprite(clothingShop, 366)
             SetBlipColour(clothingShop, 47)
-            SetBlipScale  (clothingShop, 0.7)
+            SetBlipScale(clothingShop, 0.7)
             SetBlipAsShortRange(clothingShop, true)
             BeginTextCommandSetBlipName("STRING")
             AddTextComponentString("Clothing store")
@@ -346,7 +183,7 @@ Citizen.CreateThread(function()
             local barberShop = AddBlipForCoord(Config.Stores[k].coords)
             SetBlipSprite(barberShop, 71)
             SetBlipColour(barberShop, 0)
-            SetBlipScale  (barberShop, 0.7)
+            SetBlipScale(barberShop, 0.7)
             SetBlipAsShortRange(barberShop, true)
             BeginTextCommandSetBlipName("STRING")
             AddTextComponentString("Barber")
@@ -357,7 +194,7 @@ Citizen.CreateThread(function()
             local surgeonShop = AddBlipForCoord(Config.Stores[k].coords)
             SetBlipSprite(surgeonShop, 71)
             SetBlipColour(surgeonShop, 0)
-            SetBlipScale  (surgeonShop, 0.7)
+            SetBlipScale(surgeonShop, 0.7)
             SetBlipAsShortRange(surgeonShop, true)
             BeginTextCommandSetBlipName("STRING")
             AddTextComponentString("Surgeon")
@@ -375,34 +212,63 @@ Citizen.CreateThread(function()
             local inRange = false
 
             for k, v in pairs(Config.Stores) do
-		local dist = #(pos - Config.Stores[k].coords)
+                local dist = #(pos - Config.Stores[k].coords)
                 if dist < 30 then
                     if not creatingCharacter then
-                        DrawMarker(2, Config.Stores[k].coords.x,Config.Stores[k].coords.y,Config.Stores[k].coords.z + 0.98, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.2, 255, 255, 255, 255, 0, 0, 0, 1, 0, 0, 0)
+                        DrawMarker(2, Config.Stores[k].coords.x,
+                                   Config.Stores[k].coords.y,
+                                   Config.Stores[k].coords.z + 0.98, 0.0, 0.0,
+                                   0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.2, 255, 255,
+                                   255, 255, 0, 0, 0, 1, 0, 0, 0)
                         if dist < 5 then
                             if Config.Stores[k].shopType == "clothing" then
-                                 DrawText3Ds(Config.Stores[k].coords.x, Config.Stores[k].coords.y, Config.Stores[k].coords.z + 1.25, '~g~E~w~ - To Shop For Clothes')
+                                DrawText3Ds(Config.Stores[k].coords.x,
+                                            Config.Stores[k].coords.y,
+                                            Config.Stores[k].coords.z + 1.25,
+                                            '~g~E~w~ - To Shop For Clothes')
                             elseif Config.Stores[k].shopType == "barber" then
-                                DrawText3Ds(Config.Stores[k].coords.x, Config.Stores[k].coords.y, Config.Stores[k].coords.z + 1.25, '~g~E~w~ - To Get A Haircut')
+                                DrawText3Ds(Config.Stores[k].coords.x,
+                                            Config.Stores[k].coords.y,
+                                            Config.Stores[k].coords.z + 1.25,
+                                            '~g~E~w~ - To Get A Haircut')
                             elseif Config.Stores[k].shopType == "surgeon" then
-                                DrawText3Ds(Config.Stores[k].coords.x, Config.Stores[k].coords.y, Config.Stores[k].coords.z + 1.25, '~g~E~w~ - To Get Plastic Surgery')
+                                DrawText3Ds(Config.Stores[k].coords.x,
+                                            Config.Stores[k].coords.y,
+                                            Config.Stores[k].coords.z + 1.25,
+                                            '~g~E~w~ - To Get Plastic Surgery')
                             end
                             if IsControlJustPressed(0, 38) then -- E
                                 if Config.Stores[k].shopType == "clothing" then
                                     customCamLocation = nil
                                     openMenu({
-                                        {menu = "character", label = "Clothing", selected = true},
-                                        {menu = "accessoires", label = "Accessories", selected = false}
+                                        {
+                                            menu = "character",
+                                            label = "Clothing",
+                                            selected = true
+                                        },
+                                        {
+                                            menu = "accessoires",
+                                            label = "Accessories",
+                                            selected = false
+                                        }
                                     })
                                 elseif Config.Stores[k].shopType == "barber" then
                                     customCamLocation = nil
                                     openMenu({
-                                        {menu = "clothing", label = "Hair", selected = true},
+                                        {
+                                            menu = "clothing",
+                                            label = "Hair",
+                                            selected = true
+                                        }
                                     })
                                 elseif Config.Stores[k].shopType == "surgeon" then
                                     customCamLocation = nil
                                     openMenu({
-                                        {menu = "clothing", label = "Features", selected = true},
+                                        {
+                                            menu = "clothing",
+                                            label = "Features",
+                                            selected = true
+                                        }
                                     })
                                 end
                             end
@@ -412,9 +278,7 @@ Citizen.CreateThread(function()
                 end
             end
 
-            if not inRange then
-                Citizen.Wait(2000)
-            end
+            if not inRange then Citizen.Wait(2000) end
 
         end
 
@@ -432,38 +296,100 @@ Citizen.CreateThread(function()
                 local dist = #(pos - Config.ClothingRooms[k].coords)
                 if dist < 15 then
                     if not creatingCharacter then
-                        DrawMarker(2, Config.ClothingRooms[k].coords, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.2, 255, 255, 255, 255, 0, 0, 0, 1, 0, 0, 0)
+                        DrawMarker(2, Config.ClothingRooms[k].coords, 0.0, 0.0,
+                                   0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.2, 255, 255,
+                                   255, 255, 0, 0, 0, 1, 0, 0, 0)
                         if dist < 2 then
-                            if PlayerData.job.name == Config.ClothingRooms[k].requiredJob then
-                                DrawText3Ds(Config.ClothingRooms[k].coords.x, Config.ClothingRooms[k].coords.y, Config.ClothingRooms[k].coords.z + 0.3, '~g~E~w~ - View Clothing')
+                            if PlayerData.job.name ==
+                                Config.ClothingRooms[k].requiredJob then
+                                DrawText3Ds(Config.ClothingRooms[k].coords.x,
+                                            Config.ClothingRooms[k].coords.y,
+                                            Config.ClothingRooms[k].coords.z +
+                                                0.3, '~g~E~w~ - View Clothing')
                                 if IsControlJustPressed(0, 38) then -- E
-                                    customCamLocation = Config.ClothingRooms[k].cameraLocation
+                                    customCamLocation =
+                                        Config.ClothingRooms[k].cameraLocation
                                     gender = "male"
-                                    if QBCore.Functions.GetPlayerData().charinfo.gender == 1 then gender = "female" end
-                                    QBCore.Functions.TriggerCallback('qb-clothing:server:getOutfits', function(result)
-                                        openMenu({
-                                            {menu = "roomOutfits", label = "Presets", selected = true, outfits = Config.Outfits[PlayerData.job.name][gender]},
-                                            {menu = "myOutfits", label = "My Outfits", selected = false, outfits = result},
-                                            {menu = "character", label = "Clothing", selected = false},
-                                            {menu = "accessoires", label = "Accessories", selected = false}
-                                        })
-                                    end)
-                                end
-                            else
-                                if PlayerData.gang.name == Config.ClothingRooms[k].requiredJob then
-                                    DrawText3Ds(Config.ClothingRooms[k].coords.x, Config.ClothingRooms[k].coords.y, Config.ClothingRooms[k].coords.z + 0.3, '~g~E~w~ - View Clothing')
-                                    if IsControlJustPressed(0, 38) then -- E
-                                        customCamLocation = Config.ClothingRooms[k].cameraLocation
-                                        gender = "male"
-                                        if QBCore.Functions.GetPlayerData().charinfo.gender == 1 then gender = "female" end
-                                        QBCore.Functions.TriggerCallback('qb-clothing:server:getOutfits', function(result)
+                                    if QBCore.Functions.GetPlayerData().charinfo
+                                        .gender == 1 then
+                                        gender = "female"
+                                    end
+                                    QBCore.Functions.TriggerCallback(
+                                        'qb-clothing:server:getOutfits',
+                                        function(result)
                                             openMenu({
-                                                {menu = "roomOutfits", label = "Presets", selected = true, outfits = Config.Outfits[PlayerData.gang.name][gender]},
-                                                {menu = "myOutfits", label = "My Outfits", selected = false, outfits = result},
-                                                {menu = "character", label = "Clothing", selected = false},
-                                                {menu = "accessoires", label = "Accessories", selected = false}
+                                                {
+                                                    menu = "roomOutfits",
+                                                    label = "Presets",
+                                                    selected = true,
+                                                    outfits = Config.Outfits[PlayerData.job
+                                                        .name][gender]
+                                                },
+                                                {
+                                                    menu = "myOutfits",
+                                                    label = "My Outfits",
+                                                    selected = false,
+                                                    outfits = result
+                                                },
+                                                {
+                                                    menu = "character",
+                                                    label = "Clothing",
+                                                    selected = false
+                                                },
+                                                {
+                                                    menu = "accessoires",
+                                                    label = "Accessories",
+                                                    selected = false
+                                                }
                                             })
                                         end)
+                                end
+                            else
+                                if PlayerData.gang.name ==
+                                    Config.ClothingRooms[k].requiredJob then
+                                    DrawText3Ds(
+                                        Config.ClothingRooms[k].coords.x,
+                                        Config.ClothingRooms[k].coords.y,
+                                        Config.ClothingRooms[k].coords.z + 0.3,
+                                        '~g~E~w~ - View Clothing')
+                                    if IsControlJustPressed(0, 38) then -- E
+                                        customCamLocation =
+                                            Config.ClothingRooms[k]
+                                                .cameraLocation
+                                        gender = "male"
+                                        if QBCore.Functions.GetPlayerData()
+                                            .charinfo.gender == 1 then
+                                            gender = "female"
+                                        end
+                                        QBCore.Functions.TriggerCallback(
+                                            'qb-clothing:server:getOutfits',
+                                            function(result)
+                                                openMenu({
+                                                    {
+                                                        menu = "roomOutfits",
+                                                        label = "Presets",
+                                                        selected = true,
+                                                        outfits = Config.Outfits[PlayerData.gang
+                                                            .name][gender]
+                                                    },
+                                                    {
+                                                        menu = "myOutfits",
+                                                        label = "My Outfits",
+                                                        selected = false,
+                                                        outfits = result
+                                                    },
+                                                    {
+                                                        menu = "character",
+                                                        label = "Clothing",
+                                                        selected = false
+                                                    },
+                                                    {
+                                                        menu = "accessoires",
+                                                        label = "Accessories",
+                                                        selected = false
+                                                    }
+                                                })
+                                            end)
                                     end
                                 end
                             end
@@ -472,9 +398,7 @@ Citizen.CreateThread(function()
                     end
                 end
             end
-            if not inRange then
-                Citizen.Wait(2000)
-            end
+            if not inRange then Citizen.Wait(2000) end
         end
         Citizen.Wait(3)
     end
@@ -482,9 +406,15 @@ end)
 
 RegisterNetEvent('qb-clothing:client:openOutfitMenu')
 AddEventHandler('qb-clothing:client:openOutfitMenu', function()
-    QBCore.Functions.TriggerCallback('qb-clothing:server:getOutfits', function(result)
+    QBCore.Functions.TriggerCallback('qb-clothing:server:getOutfits',
+                                     function(result)
         openMenu({
-            {menu = "myOutfits", label = "My Outfits", selected = true, outfits = result},
+            {
+                menu = "myOutfits",
+                label = "My Outfits",
+                selected = true,
+                outfits = result
+            }
         })
     end)
 end)
@@ -527,53 +457,51 @@ end)
 firstChar = false
 
 local clothingCategorys = {
-    ["arms"]        = {type = "variation",  id = 3},
-    ["t-shirt"]     = {type = "variation",  id = 8},
-    ["torso2"]      = {type = "variation",  id = 11},
-    ["pants"]       = {type = "variation",  id = 4},
-    ["vest"]        = {type = "variation",  id = 9},
-    ["shoes"]       = {type = "variation",  id = 6},
-    ["bag"]         = {type = "variation",  id = 5},
-    ["hair"]        = {type = "hair",       id = 2},
-    ["eyebrows"]    = {type = "overlay",    id = 2},
-    ["face"]        = {type = "face",       id = 2},
-    ["face2"]       = {type = "face",       id = 2},
-    ["facemix"]     = {type = "face",       id = 2},
-    ["beard"]       = {type = "overlay",    id = 1},
-    ["blush"]       = {type = "overlay",    id = 5},
-    ["lipstick"]    = {type = "overlay",    id = 8},
-    ["makeup"]      = {type = "overlay",    id = 4},
-    ["ageing"]      = {type = "ageing",     id = 3},
-    ["mask"]        = {type = "mask",       id = 1},
-    ["hat"]         = {type = "prop",       id = 0},
-    ["glass"]       = {type = "prop",       id = 1},
-    ["ear"]         = {type = "prop",       id = 2},
-    ["watch"]       = {type = "prop",       id = 6},
-    ["bracelet"]    = {type = "prop",       id = 7},
-    ["accessory"]   = {type = "variation",  id = 7},
-    ["decals"]      = {type = "variation",  id = 10},
-    ["eye_color"]   = {type = "eye_color",  id = 1},
-    ["moles"]   = {type = "moles",  id = 1},
-    ["jaw_bone_width"]   = {type = "cheek",  id = 1},
-    ["jaw_bone_back_lenght"]   = {type = "cheek",  id = 1},
-    ["lips_thickness"]   = {type = "nose",  id = 1},
-    ["nose_0"]   = {type = "nose",  id = 1},
-    ["nose_1"]   = {type = "nose",  id = 1},
-    ["nose_2"]   = {type = "nose",  id = 2},
-    ["nose_3"]   = {type = "nose",  id = 3},
-    ["nose_4"]   = {type = "nose",  id = 4},
-    ["nose_5"]   = {type = "nose",  id = 5},
-    ["cheek_1"]   = {type = "cheek",  id = 1},
-    ["cheek_2"]   = {type = "cheek",  id = 2},
-    ["cheek_3"]   = {type = "cheek",  id = 3},
-    ["eyebrown_high"]   = {type = "nose",  id = 1},
-    ["eyebrown_forward"]   = {type = "nose",  id = 2},
-    ["eye_opening"]   = {type = "nose",  id = 1},
-    ["chimp_bone_lowering"]   = {type = "chin",  id = 1},
-    ["chimp_bone_lenght"]   = {type = "chin",  id = 2},
-    ["chimp_bone_width"]   = {type = "cheek",  id = 3},
-    ["chimp_hole"]   = {type = "cheek",  id = 4},
-    ["neck_thikness"]   = {type = "cheek",  id = 5},
+    ["arms"] = {type = "variation", id = 3},
+    ["t-shirt"] = {type = "variation", id = 8},
+    ["torso2"] = {type = "variation", id = 11},
+    ["pants"] = {type = "variation", id = 4},
+    ["vest"] = {type = "variation", id = 9},
+    ["shoes"] = {type = "variation", id = 6},
+    ["bag"] = {type = "variation", id = 5},
+    ["hair"] = {type = "hair", id = 2},
+    ["eyebrows"] = {type = "overlay", id = 2},
+    ["face"] = {type = "face", id = 2},
+    ["beard"] = {type = "overlay", id = 1},
+    ["blush"] = {type = "overlay", id = 5},
+    ["lipstick"] = {type = "overlay", id = 8},
+    ["makeup"] = {type = "overlay", id = 4},
+    ["ageing"] = {type = "ageing", id = 3},
+    ["mask"] = {type = "mask", id = 1},
+    ["hat"] = {type = "prop", id = 0},
+    ["glass"] = {type = "prop", id = 1},
+    ["ear"] = {type = "prop", id = 2},
+    ["watch"] = {type = "prop", id = 6},
+    ["bracelet"] = {type = "prop", id = 7},
+    ["accessory"] = {type = "variation", id = 7},
+    ["decals"] = {type = "variation", id = 10},
+    ["eye_color"] = {type = "eye_color", id = 1},
+    ["moles"] = {type = "moles", id = 1},
+    ["jaw_bone_width"] = {type = "cheek", id = 1},
+    ["jaw_bone_back_lenght"] = {type = "cheek", id = 1},
+    ["lips_thickness"] = {type = "nose", id = 1},
+    ["nose_0"] = {type = "nose", id = 1},
+    ["nose_1"] = {type = "nose", id = 1},
+    ["nose_2"] = {type = "nose", id = 2},
+    ["nose_3"] = {type = "nose", id = 3},
+    ["nose_4"] = {type = "nose", id = 4},
+    ["nose_5"] = {type = "nose", id = 5},
+    ["cheek_1"] = {type = "cheek", id = 1},
+    ["cheek_2"] = {type = "cheek", id = 2},
+    ["cheek_3"] = {type = "cheek", id = 3},
+    ["eyebrown_high"] = {type = "nose", id = 1},
+    ["eyebrown_forward"] = {type = "nose", id = 2},
+    ["eye_opening"] = {type = "nose", id = 1},
+    ["chimp_bone_lowering"] = {type = "chin", id = 1},
+    ["chimp_bone_lenght"] = {type = "chin", id = 2},
+    ["chimp_bone_width"] = {type = "cheek", id = 3},
+    ["chimp_hole"] = {type = "cheek", id = 4},
+    ["neck_thikness"] = {type = "cheek", id = 5}
 }
 
 RegisterNetEvent('qb-clothing:client:openMenu')
@@ -588,60 +516,63 @@ end)
 
 function GetMaxValues()
     maxModelValues = {
-        ["arms"]        = {type = "character", item = 0, texture = 0},
-        ["eye_color"]   = {type = "hair", item = 0, texture = 0},
-        ["t-shirt"]     = {type = "character", item = 0, texture = 0},
-        ["torso2"]      = {type = "character", item = 0, texture = 0},
-        ["pants"]       = {type = "character", item = 0, texture = 0},
-        ["shoes"]       = {type = "character", item = 0, texture = 0},
-        ["face"]        = {type = "character", item = 0, texture = 0},
-        ["face2"]       = {type = "character", item = 0, texture = 0},
-        ["facemix"]     = {type = "character", shapeMix = 0, skinMix = 0},
-        ["vest"]        = {type = "character", item = 0, texture = 0},
-        ["accessory"]   = {type = "character", item = 0, texture = 0},
-        ["decals"]      = {type = "character", item = 0, texture = 0},
-        ["bag"]         = {type = "character", item = 0, texture = 0},
-        ["moles"]       = {type = "hair", item = 0, texture = 0},
-        ["hair"]        = {type = "hair", item = 0, texture = 0},
-        ["eyebrows"]    = {type = "hair", item = 0, texture = 0},
-        ["beard"]       = {type = "hair", item = 0, texture = 0},
-        ["eye_opening"]   = {type = "hair",  id = 1},
-        ["jaw_bone_width"]       = {type = "hair", item = 0, texture = 0},
-        ["jaw_bone_back_lenght"]       = {type = "hair", item = 0, texture = 0},
-        ["lips_thickness"]       = {type = "hair", item = 0, texture = 0},
-        ["cheek_1"]       = {type = "hair", item = 0, texture = 0},
-        ["cheek_2"]       = {type = "hair", item = 0, texture = 0},
-        ["cheek_3"]       = {type = "hair", item = 0, texture = 0},
-        ["eyebrown_high"]       = {type = "hair", item = 0, texture = 0},
-        ["eyebrown_forward"]       = {type = "hair", item = 0, texture = 0},
-        ["nose_0"]       = {type = "hair", item = 0, texture = 0},
-        ["nose_1"]       = {type = "hair", item = 0, texture = 0},
-        ["nose_2"]       = {type = "hair", item = 0, texture = 0},
-        ["nose_3"]       = {type = "hair", item = 0, texture = 0},
-        ["nose_4"]       = {type = "hair", item = 0, texture = 0},
-        ["nose_5"]       = {type = "hair", item = 0, texture = 0},
-        ["chimp_bone_lowering"]       = {type = "hair", item = 0, texture = 0},
-        ["chimp_bone_lenght"]       = {type = "hair", item = 0, texture = 0},
-        ["chimp_bone_width"]       = {type = "hair", item = 0, texture = 0},
-        ["chimp_hole"]       = {type = "hair", item = 0, texture = 0},
-        ["neck_thikness"]       = {type = "hair", item = 0, texture = 0},
-        ["blush"]       = {type = "hair", item = 0, texture = 0},
-        ["lipstick"]    = {type = "hair", item = 0, texture = 0},
-        ["makeup"]      = {type = "hair", item = 0, texture = 0},
-        ["ageing"]      = {type = "hair", item = 0, texture = 0},
-        ["mask"]        = {type = "accessoires", item = 0, texture = 0},
-        ["hat"]         = {type = "accessoires", item = 0, texture = 0},
-        ["glass"]       = {type = "accessoires", item = 0, texture = 0},
-        ["ear"]         = {type = "accessoires", item = 0, texture = 0},
-        ["watch"]       = {type = "accessoires", item = 0, texture = 0},
-        ["bracelet"]    = {type = "accessoires", item = 0, texture = 0},
+        ["arms"] = {type = "character", item = 0, texture = 0},
+        ["eye_color"] = {type = "hair", item = 0, texture = 0},
+        ["t-shirt"] = {type = "character", item = 0, texture = 0},
+        ["torso2"] = {type = "character", item = 0, texture = 0},
+        ["pants"] = {type = "character", item = 0, texture = 0},
+        ["shoes"] = {type = "character", item = 0, texture = 0},
+        ["face"] = {type = "character", item = 0, texture = 0},
+        ["vest"] = {type = "character", item = 0, texture = 0},
+        ["accessory"] = {type = "character", item = 0, texture = 0},
+        ["decals"] = {type = "character", item = 0, texture = 0},
+        ["bag"] = {type = "character", item = 0, texture = 0},
+        ["moles"] = {type = "hair", item = 0, texture = 0},
+        ["hair"] = {type = "hair", item = 0, texture = 0},
+        ["eyebrows"] = {type = "hair", item = 0, texture = 0},
+        ["beard"] = {type = "hair", item = 0, texture = 0},
+        ["eye_opening"] = {type = "hair", id = 1},
+        ["jaw_bone_width"] = {type = "hair", item = 0, texture = 0},
+        ["jaw_bone_back_lenght"] = {type = "hair", item = 0, texture = 0},
+        ["lips_thickness"] = {type = "hair", item = 0, texture = 0},
+        ["cheek_1"] = {type = "hair", item = 0, texture = 0},
+        ["cheek_2"] = {type = "hair", item = 0, texture = 0},
+        ["cheek_3"] = {type = "hair", item = 0, texture = 0},
+        ["eyebrown_high"] = {type = "hair", item = 0, texture = 0},
+        ["eyebrown_forward"] = {type = "hair", item = 0, texture = 0},
+        ["nose_0"] = {type = "hair", item = 0, texture = 0},
+        ["nose_1"] = {type = "hair", item = 0, texture = 0},
+        ["nose_2"] = {type = "hair", item = 0, texture = 0},
+        ["nose_3"] = {type = "hair", item = 0, texture = 0},
+        ["nose_4"] = {type = "hair", item = 0, texture = 0},
+        ["nose_5"] = {type = "hair", item = 0, texture = 0},
+        ["chimp_bone_lowering"] = {type = "hair", item = 0, texture = 0},
+        ["chimp_bone_lenght"] = {type = "hair", item = 0, texture = 0},
+        ["chimp_bone_width"] = {type = "hair", item = 0, texture = 0},
+        ["chimp_hole"] = {type = "hair", item = 0, texture = 0},
+        ["neck_thikness"] = {type = "hair", item = 0, texture = 0},
+        ["blush"] = {type = "hair", item = 0, texture = 0},
+        ["lipstick"] = {type = "hair", item = 0, texture = 0},
+        ["makeup"] = {type = "hair", item = 0, texture = 0},
+        ["ageing"] = {type = "hair", item = 0, texture = 0},
+        ["mask"] = {type = "accessoires", item = 0, texture = 0},
+        ["hat"] = {type = "accessoires", item = 0, texture = 0},
+        ["glass"] = {type = "accessoires", item = 0, texture = 0},
+        ["ear"] = {type = "accessoires", item = 0, texture = 0},
+        ["watch"] = {type = "accessoires", item = 0, texture = 0},
+        ["bracelet"] = {type = "accessoires", item = 0, texture = 0}
 
     }
     local ped = PlayerPedId()
     for k, v in pairs(clothingCategorys) do
         if v.type == "variation" then
             maxModelValues[k].item = GetNumberOfPedDrawableVariations(ped, v.id)
-            maxModelValues[k].texture = GetNumberOfPedTextureVariations(ped, v.id, GetPedDrawableVariation(ped, v.id)) -1
+            maxModelValues[k].texture = GetNumberOfPedTextureVariations(ped,
+                                                                        v.id,
+                                                                        GetPedDrawableVariation(
+                                                                            ped,
+                                                                            v.id)) -
+                                            1
         end
 
         if v.type == "hair" then
@@ -651,22 +582,16 @@ function GetMaxValues()
 
         if v.type == "mask" then
             maxModelValues[k].item = GetNumberOfPedDrawableVariations(ped, v.id)
-            maxModelValues[k].texture = GetNumberOfPedTextureVariations(ped, v.id, GetPedDrawableVariation(ped, v.id))
+            maxModelValues[k].texture = GetNumberOfPedTextureVariations(ped,
+                                                                        v.id,
+                                                                        GetPedDrawableVariation(
+                                                                            ped,
+                                                                            v.id))
         end
 
         if v.type == "face" then
-            maxModelValues[k].item = 45
+            maxModelValues[k].item = 44
             maxModelValues[k].texture = 15
-        end
-
-        if v.type == "face2" then
-            maxModelValues[k].item = 45
-            maxModelValues[k].texture = 15
-        end
-
-        if v.type == "facemix" then
-            maxModelValues[k].shapeMix = 10
-            maxModelValues[k].skinMix = 10
         end
 
         if v.type == "ageing" then
@@ -680,8 +605,13 @@ function GetMaxValues()
         end
 
         if v.type == "prop" then
-            maxModelValues[k].item = GetNumberOfPedPropDrawableVariations(ped, v.id)
-            maxModelValues[k].texture = GetNumberOfPedPropTextureVariations(ped, v.id, GetPedPropIndex(ped, v.id))
+            maxModelValues[k].item = GetNumberOfPedPropDrawableVariations(ped,
+                                                                          v.id)
+            maxModelValues[k].texture = GetNumberOfPedPropTextureVariations(ped,
+                                                                            v.id,
+                                                                            GetPedPropIndex(
+                                                                                ped,
+                                                                                v.id))
         end
 
         if v.type == "eye_color" then
@@ -690,7 +620,7 @@ function GetMaxValues()
         end
 
         if v.type == "moles" then
-            maxModelValues[k].item = GetNumHeadOverlayValues(9) -1
+            maxModelValues[k].item = GetNumHeadOverlayValues(9) - 1
             maxModelValues[k].texture = 10
         end
 
@@ -711,10 +641,7 @@ function GetMaxValues()
 
     end
 
-    SendNUIMessage({
-        action = "updateMax",
-        maxValues = maxModelValues
-    })
+    SendNUIMessage({action = "updateMax", maxValues = maxModelValues})
 end
 
 function openMenu(allowedMenus)
@@ -729,7 +656,7 @@ function openMenu(allowedMenus)
         action = "open",
         menus = allowedMenus,
         currentClothing = skinData,
-        hasTracker = trackerMeta,
+        hasTracker = trackerMeta
     })
     SetNuiFocus(true, true)
     SetCursorLocation(0.9, 0.25)
@@ -752,10 +679,7 @@ end)
 
 RegisterNetEvent('qb-clothing:client:reloadOutfits')
 AddEventHandler('qb-clothing:client:reloadOutfits', function(myOutfits)
-    SendNUIMessage({
-        action = "reloadMyOutfits",
-        outfits = myOutfits
-    })
+    SendNUIMessage({action = "reloadMyOutfits", outfits = myOutfits})
 end)
 
 function enableCam()
@@ -763,7 +687,7 @@ function enableCam()
     local coords = GetOffsetFromEntityInWorldCoords(PlayerPedId(), 0, 2.0, 0)
     RenderScriptCams(false, false, 0, 1, 0)
     DestroyCam(cam, false)
-    if(not DoesCamExist(cam)) then
+    if (not DoesCamExist(cam)) then
         cam = CreateCam('DEFAULT_SCRIPTED_CAMERA', true)
         SetCamActive(cam, true)
         RenderScriptCams(true, false, 0, true, true)
@@ -772,7 +696,8 @@ function enableCam()
     end
 
     if customCamLocation ~= nil then
-        SetCamCoord(cam, customCamLocation.x, customCamLocation.y, customCamLocation.z)
+        SetCamCoord(cam, customCamLocation.x, customCamLocation.y,
+                    customCamLocation.z)
     end
 
     headingToCam = GetEntityHeading(PlayerPedId()) + 90
@@ -801,26 +726,30 @@ RegisterNUICallback('setupCam', function(data)
 
     if value == 1 then
         local coords = GetCamCoord(cam)
-		camOffset = 0.75
-		local cx, cy = GetPositionByRelativeHeading(PlayerPedId(), headingToCam, camOffset)
+        camOffset = 0.75
+        local cx, cy = GetPositionByRelativeHeading(PlayerPedId(), headingToCam,
+                                                    camOffset)
         SetCamCoord(cam, cx, cy, pedPos.z + 0.65)
         PointCamAtCoord(cam, pedPos.x, pedPos.y, pedPos.z + 0.65)
     elseif value == 2 then
         local coords = GetCamCoord(cam)
-		camOffset = 1.0
-		local cx, cy = GetPositionByRelativeHeading(PlayerPedId(), headingToCam, camOffset)
+        camOffset = 1.0
+        local cx, cy = GetPositionByRelativeHeading(PlayerPedId(), headingToCam,
+                                                    camOffset)
         SetCamCoord(cam, cx, cy, pedPos.z + 0.2)
         PointCamAtCoord(cam, pedPos.x, pedPos.y, pedPos.z + 0.2)
     elseif value == 3 then
         local coords = GetCamCoord(cam)
-		camOffset = 1.0
-		local cx, cy = GetPositionByRelativeHeading(PlayerPedId(), headingToCam, camOffset)
+        camOffset = 1.0
+        local cx, cy = GetPositionByRelativeHeading(PlayerPedId(), headingToCam,
+                                                    camOffset)
         SetCamCoord(cam, cx, cy, pedPos.z + -0.5)
         PointCamAtCoord(cam, pedPos.x, pedPos.y, pedPos.z + -0.5)
     else
         local coords = GetCamCoord(cam)
-		camOffset = 2.0
-		local cx, cy = GetPositionByRelativeHeading(PlayerPedId(), headingToCam, camOffset)
+        camOffset = 2.0
+        local cx, cy = GetPositionByRelativeHeading(PlayerPedId(), headingToCam,
+                                                    camOffset)
         SetCamCoord(cam, cx, cy, pedPos.z + 0.2)
         PointCamAtCoord(cam, pedPos.x, pedPos.y, pedPos.z + 0.2)
     end
@@ -834,9 +763,7 @@ function disableCam()
 end
 
 function closeMenu()
-    SendNUIMessage({
-        action = "close",
-    })
+    SendNUIMessage({action = "close"})
     disableCam()
 end
 
@@ -850,11 +777,15 @@ function resetClothing(data)
     local ped = PlayerPedId()
 
     -- Face
-    SetPedHeadBlendData(ped, data["face"].item, data["face2"].item, nil, data["face"].texture, data["face2"].texture, nil, data["facemix"].shapeMix, data["facemix"].skinMix, nil, true)
+    SetPedHeadBlendData(ped, data["face"].item, data["face"].item,
+                        data["face"].item, data["face"].texture,
+                        data["face"].texture, data["face"].texture, 1.0, 1.0,
+                        1.0, true)
 
     -- Pants
     SetPedComponentVariation(ped, 4, data["pants"].item, 0, 0)
-    SetPedComponentVariation(ped, 4, data["pants"].item, data["pants"].texture, 0)
+    SetPedComponentVariation(ped, 4, data["pants"].item, data["pants"].texture,
+                             0)
 
     -- Hair
     SetPedComponentVariation(ped, 2, data["hair"].item, 0, 0)
@@ -890,7 +821,8 @@ function resetClothing(data)
 
     -- T-Shirt
     SetPedComponentVariation(ped, 8, data["t-shirt"].item, 0, 2)
-    SetPedComponentVariation(ped, 8, data["t-shirt"].item, data["t-shirt"].texture, 0)
+    SetPedComponentVariation(ped, 8, data["t-shirt"].item,
+                             data["t-shirt"].texture, 0)
 
     -- Vest
     SetPedComponentVariation(ped, 9, data["vest"].item, 0, 2)
@@ -898,11 +830,13 @@ function resetClothing(data)
 
     -- Torso 2
     SetPedComponentVariation(ped, 11, data["torso2"].item, 0, 2)
-    SetPedComponentVariation(ped, 11, data["torso2"].item, data["torso2"].texture, 0)
+    SetPedComponentVariation(ped, 11, data["torso2"].item,
+                             data["torso2"].texture, 0)
 
     -- Shoes
     SetPedComponentVariation(ped, 6, data["shoes"].item, 0, 2)
-    SetPedComponentVariation(ped, 6, data["shoes"].item, data["shoes"].texture, 0)
+    SetPedComponentVariation(ped, 6, data["shoes"].item, data["shoes"].texture,
+                             0)
 
     -- Mask
     SetPedComponentVariation(ped, 1, data["mask"].item, 0, 2)
@@ -910,11 +844,13 @@ function resetClothing(data)
 
     -- Badge
     SetPedComponentVariation(ped, 10, data["decals"].item, 0, 2)
-    SetPedComponentVariation(ped, 10, data["decals"].item, data["decals"].texture, 0)
+    SetPedComponentVariation(ped, 10, data["decals"].item,
+                             data["decals"].texture, 0)
 
     -- Accessory
     SetPedComponentVariation(ped, 7, data["accessory"].item, 0, 2)
-    SetPedComponentVariation(ped, 7, data["accessory"].item, data["accessory"].texture, 0)
+    SetPedComponentVariation(ped, 7, data["accessory"].item,
+                             data["accessory"].texture, 0)
 
     -- Bag
     SetPedComponentVariation(ped, 5, data["bag"].item, 0, 2)
@@ -972,7 +908,8 @@ function resetClothing(data)
 
     -- Bracelet
     if data["bracelet"].item ~= -1 and data["bracelet"].item ~= 0 then
-        SetPedPropIndex(ped, 7, data["bracelet"].item, data["bracelet"].texture, true)
+        SetPedPropIndex(ped, 7, data["bracelet"].item, data["bracelet"].texture,
+                        true)
     else
         ClearPedProp(ped, 7)
     end
@@ -986,21 +923,19 @@ RegisterNUICallback('close', function()
     FreezeEntityPosition(PlayerPedId(), false)
 end)
 
-RegisterNUICallback('getCatergoryItems', function(data, cb)
-    cb(Config.Menus[data.category])
-end)
+RegisterNUICallback('getCatergoryItems',
+                    function(data, cb) cb(Config.Menus[data.category]) end)
 
-RegisterNUICallback('updateSkin', function(data)
-    ChangeVariation(data)
-end)
+RegisterNUICallback('updateSkin', function(data) ChangeVariation(data) end)
 
-RegisterNUICallback('updateSkinOnInput', function(data)
-    ChangeVariation(data)
-end)
+RegisterNUICallback('updateSkinOnInput',
+                    function(data) ChangeVariation(data) end)
 
 RegisterNUICallback('removeOutfit', function(data, cb)
-    TriggerServerEvent('qb-clothing:server:removeOutfit', data.outfitName, data.outfitId)
-    QBCore.Functions.Notify("You have deleted your"..data.outfitName.." outfit!")
+    TriggerServerEvent('qb-clothing:server:removeOutfit', data.outfitName,
+                       data.outfitId)
+    QBCore.Functions.Notify("You have deleted your" .. data.outfitName ..
+                                " outfit!")
 end)
 
 function ChangeVariation(data)
@@ -1020,30 +955,22 @@ function ChangeVariation(data)
         end
     elseif clothingCategory == "face" then
         if type == "item" then
-            SetPedHeadBlendData(ped, tonumber(item), skinData["face2"].item, nil, skinData["face"].texture, skinData["face2"].texture, nil, skinData["facemix"].shapeMix, skinData["facemix"].skinMix, nil, true)         
+            SetPedHeadBlendData(ped, tonumber(item), tonumber(item),
+                                tonumber(item), skinData["face"].texture,
+                                skinData["face"].texture,
+                                skinData["face"].texture, 1.0, 1.0, 1.0, true)
             skinData["face"].item = item
         elseif type == "texture" then
-            SetPedHeadBlendData(ped, skinData["face"].item, skinData["face2"].item, nil, item, skinData["face2"].texture, nil, skinData["facemix"].shapeMix, skinData["facemix"].skinMix, nil, true)
+            SetPedHeadBlendData(ped, skinData["face"].item,
+                                skinData["face"].item, skinData["face"].item,
+                                item, item, item, 1.0, 1.0, 1.0, true)
             skinData["face"].texture = item
         end
-    elseif clothingCategory == "face2" then
-        if type == "item" then
-            SetPedHeadBlendData(ped, skinData["face"].item, tonumber(item), nil, skinData["face"].texture, skinData["face2"].texture, nil, skinData["facemix"].shapeMix, skinData["facemix"].skinMix , nil, true)
-            skinData["face2"].item = item
-        elseif type == "texture" then
-            SetPedHeadBlendData(ped, skinData["face"].item, skinData["face2"].item, nil, skinData["face"].texture, item, nil, skinData["facemix"].shapeMix, skinData["facemix"].skinMix , nil, true)
-            skinData["face2"].texture = item
-        end
-    elseif clothingCategory == "facemix" then
-        if type == "skinMix" then
-            SetPedHeadBlendData(ped, skinData["face"].item, skinData["face2"].item, nil, skinData["face"].texture, skinData["face2"].texture, nil, skinData["facemix"].shapeMix, item, nil, true)
-            skinData["facemix"].skinMix = item
-        elseif type == "shapeMix" then
-            SetPedHeadBlendData(ped, skinData["face"].item, skinData["face2"].item, nil, skinData["face"].texture, skinData["face2"].texture, nil, item, skinData["facemix"].skinMix , nil, true)
-            skinData["facemix"].shapeMix = item
-        end
     elseif clothingCategory == "hair" then
-        SetPedHeadBlendData(ped, skinData["face"].item, skinData["face2"].item, nil, skinData["face"].texture, skinData["face2"].texture, nil, skinData["facemix"].shapeMix, skinData["facemix"].skinMix , nil, true)
+        SetPedHeadBlendData(ped, skinData["face"].item, skinData["face"].item,
+                            skinData["face"].item, skinData["face"].texture,
+                            skinData["face"].texture, skinData["face"].texture,
+                            1.0, 1.0, 1.0, true)
         if type == "item" then
             SetPedComponentVariation(ped, 2, item, 0, 0)
             skinData["hair"].item = item
@@ -1108,7 +1035,7 @@ function ChangeVariation(data)
             SetPedComponentVariation(ped, 3, curItem, item, 0)
             skinData["arms"].texture = item
         end
-     elseif clothingCategory == "eye_color" then
+    elseif clothingCategory == "eye_color" then
         if type == "item" then
             -- SetPedEyeColor(ped, 12, item, 0, 2)
             -- skinData["arms"].item = item
@@ -1503,60 +1430,45 @@ function ChangeVariation(data)
     GetMaxValues()
 end
 
-function tprint (tbl, indent)
-	if not indent then indent = 0 end
-	local toprint = string.rep(" ", indent) .. "{\r\n"
-	indent = indent + 2
-	for k, v in pairs(tbl) do
-	  toprint = toprint .. string.rep(" ", indent)
-	  if (type(k) == "number") then
-		toprint = toprint .. "[" .. k .. "] = "
-	  elseif (type(k) == "string") then
-		toprint = toprint  .. k ..  "= "
-	  end
-	  if (type(v) == "number") then
-		toprint = toprint .. v .. ",\r\n"
-	  elseif (type(v) == "string") then
-		toprint = toprint .. "\"" .. v .. "\",\r\n"
-	  elseif (type(v) == "table") then
-		toprint = toprint .. tprint(v, indent + 2) .. ",\r\n"
-	  else
-		toprint = toprint .. "\"" .. tostring(v) .. "\",\r\n"
-	  end
-	end
-	toprint = toprint .. string.rep(" ", indent-2) .. "}"
-	return toprint
-  end
-
+function tprint(tbl, indent)
+    if not indent then indent = 0 end
+    local toprint = string.rep(" ", indent) .. "{\r\n"
+    indent = indent + 2
+    for k, v in pairs(tbl) do
+        toprint = toprint .. string.rep(" ", indent)
+        if (type(k) == "number") then
+            toprint = toprint .. "[" .. k .. "] = "
+        elseif (type(k) == "string") then
+            toprint = toprint .. k .. "= "
+        end
+        if (type(v) == "number") then
+            toprint = toprint .. v .. ",\r\n"
+        elseif (type(v) == "string") then
+            toprint = toprint .. "\"" .. v .. "\",\r\n"
+        elseif (type(v) == "table") then
+            toprint = toprint .. tprint(v, indent + 2) .. ",\r\n"
+        else
+            toprint = toprint .. "\"" .. tostring(v) .. "\",\r\n"
+        end
+    end
+    toprint = toprint .. string.rep(" ", indent - 2) .. "}"
+    return toprint
+end
 
 function LoadPlayerModel(skin)
     RequestModel(skin)
-    while not HasModelLoaded(skin) do
-        Citizen.Wait(0)
-    end
+    while not HasModelLoaded(skin) do Citizen.Wait(0) end
 end
 
 local blockedPeds = {
-    "mp_m_freemode_01",
-    "mp_f_freemode_01",
-    "tony",
-    "g_m_m_chigoon_02_m",
-    "u_m_m_jesus_01",
-    "a_m_y_stbla_m",
-    "ig_terry_m",
-    "a_m_m_ktown_m",
-    "a_m_y_skater_m",
-    "u_m_y_coop",
-    "ig_car3guy1_m",
+    "mp_m_freemode_01", "mp_f_freemode_01", "tony", "g_m_m_chigoon_02_m",
+    "u_m_m_jesus_01", "a_m_y_stbla_m", "ig_terry_m", "a_m_m_ktown_m",
+    "a_m_y_skater_m", "u_m_y_coop", "ig_car3guy1_m"
 }
 
 function isPedAllowedRandom(skin)
     local retval = false
-    for k, v in pairs(blockedPeds) do
-        if v ~= skin then
-            retval = true
-        end
-    end
+    for k, v in pairs(blockedPeds) do if v ~= skin then retval = true end end
     return retval
 end
 
@@ -1577,14 +1489,14 @@ function ChangeToSkinNoUpdate(skin)
                 ChangeVariation({
                     clothingType = k,
                     articleNumber = v.defaultItem,
-                    type = "item",
+                    type = "item"
                 })
             else
-                if k ~= "face" and k ~= "hair" and k ~= "face2" then
+                if k ~= "face" and k ~= "hair" then
                     ChangeVariation({
                         clothingType = k,
                         articleNumber = v.defaultItem,
-                        type = "item",
+                        type = "item"
                     })
                 end
             end
@@ -1593,14 +1505,14 @@ function ChangeToSkinNoUpdate(skin)
                 ChangeVariation({
                     clothingType = k,
                     articleNumber = v.defaultTexture,
-                    type = "texture",
+                    type = "texture"
                 })
             else
-                if k ~= "face" and k ~= "hair" and k ~= "face2" then
+                if k ~= "face" and k ~= "hair" then
                     ChangeVariation({
                         clothingType = k,
                         articleNumber = v.defaultTexture,
-                        type = "texture",
+                        type = "texture"
                     })
                 end
             end
@@ -1620,14 +1532,12 @@ RegisterNUICallback('setCurrentPed', function(data, cb)
     end
 end)
 
-RegisterNUICallback('saveClothing', function(data)
-    SaveSkin()
-end)
+RegisterNUICallback('saveClothing', function(data) SaveSkin() end)
 
 function SaveSkin()
-	local model = GetEntityModel(PlayerPedId())
+    local model = GetEntityModel(PlayerPedId())
     clothing = json.encode(skinData)
-	TriggerServerEvent("qb-clothing:saveSkin", model, clothing)
+    TriggerServerEvent("qb-clothing:saveSkin", model, clothing)
 end
 
 RegisterNetEvent('qb-clothes:client:CreateFirstCharacter')
@@ -1640,14 +1550,10 @@ AddEventHandler('qb-clothes:client:CreateFirstCharacter', function()
             {menu = "accessoires", label = "Accessories", selected = false}
         })
 
-        if PlayerData.charinfo.gender == 1 then
-            skin = "mp_f_freemode_01"
-        end
+        if PlayerData.charinfo.gender == 1 then skin = "mp_f_freemode_01" end
 
         ChangeToSkinNoUpdate(skin)
-        SendNUIMessage({
-            action = "ResetValues",
-        })
+        SendNUIMessage({action = "ResetValues"})
     end)
 end)
 
@@ -1663,7 +1569,8 @@ AddEventHandler("qb-clothes:loadSkin", function(new, model, data)
         SetPlayerModel(PlayerId(), model)
         SetPedComponentVariation(PlayerPedId(), 0, 0, 0, 2)
         data = json.decode(data)
-        TriggerEvent('qb-clothing:client:loadPlayerClothing', data, PlayerPedId())
+        TriggerEvent('qb-clothing:client:loadPlayerClothing', data,
+                     PlayerPedId())
     end)
 end)
 
@@ -1671,27 +1578,20 @@ RegisterNetEvent('qb-clothing:client:loadPlayerClothing')
 AddEventHandler('qb-clothing:client:loadPlayerClothing', function(data, ped)
     if ped == nil then ped = PlayerPedId() end
 
-    for i = 0, 11 do
-        SetPedComponentVariation(ped, i, 0, 0, 0)
-    end
+    for i = 0, 11 do SetPedComponentVariation(ped, i, 0, 0, 0) end
 
-    for i = 0, 7 do
-        ClearPedProp(ped, i)
-    end
+    for i = 0, 7 do ClearPedProp(ped, i) end
 
     -- Face
-    if not data["facemix"] or not data["face2"] then 
-        data["facemix"] = skinData["facemix"]
-        data["facemix"].shapeMix = data["facemix"].defaultShapeMix
-        data["facemix"].skinMix = data["facemix"].defaultSkinMix
-        data["face2"] = skinData["face2"]
-    end 
-
-    SetPedHeadBlendData(ped, data["face"].item, data["face2"].item, nil, data["face"].texture, data["face2"].texture, nil, data["facemix"].shapeMix, data["facemix"].skinMix, nil, true)
+    SetPedHeadBlendData(ped, data["face"].item, data["face"].item,
+                        data["face"].item, data["face"].texture,
+                        data["face"].texture, data["face"].texture, 1.0, 1.0,
+                        1.0, true)
 
     -- Pants
     SetPedComponentVariation(ped, 4, data["pants"].item, 0, 0)
-    SetPedComponentVariation(ped, 4, data["pants"].item, data["pants"].texture, 0)
+    SetPedComponentVariation(ped, 4, data["pants"].item, data["pants"].texture,
+                             0)
 
     -- Hair
     SetPedComponentVariation(ped, 2, data["hair"].item, 0, 0)
@@ -1727,7 +1627,8 @@ AddEventHandler('qb-clothing:client:loadPlayerClothing', function(data, ped)
 
     -- T-Shirt
     SetPedComponentVariation(ped, 8, data["t-shirt"].item, 0, 2)
-    SetPedComponentVariation(ped, 8, data["t-shirt"].item, data["t-shirt"].texture, 0)
+    SetPedComponentVariation(ped, 8, data["t-shirt"].item,
+                             data["t-shirt"].texture, 0)
 
     -- Vest
     SetPedComponentVariation(ped, 9, data["vest"].item, 0, 2)
@@ -1735,11 +1636,13 @@ AddEventHandler('qb-clothing:client:loadPlayerClothing', function(data, ped)
 
     -- Torso 2
     SetPedComponentVariation(ped, 11, data["torso2"].item, 0, 2)
-    SetPedComponentVariation(ped, 11, data["torso2"].item, data["torso2"].texture, 0)
+    SetPedComponentVariation(ped, 11, data["torso2"].item,
+                             data["torso2"].texture, 0)
 
     -- Shoes
     SetPedComponentVariation(ped, 6, data["shoes"].item, 0, 2)
-    SetPedComponentVariation(ped, 6, data["shoes"].item, data["shoes"].texture, 0)
+    SetPedComponentVariation(ped, 6, data["shoes"].item, data["shoes"].texture,
+                             0)
 
     -- Mask
     SetPedComponentVariation(ped, 1, data["mask"].item, 0, 2)
@@ -1747,11 +1650,13 @@ AddEventHandler('qb-clothing:client:loadPlayerClothing', function(data, ped)
 
     -- Badge
     SetPedComponentVariation(ped, 10, data["decals"].item, 0, 2)
-    SetPedComponentVariation(ped, 10, data["decals"].item, data["decals"].texture, 0)
+    SetPedComponentVariation(ped, 10, data["decals"].item,
+                             data["decals"].texture, 0)
 
     -- Accessory
     SetPedComponentVariation(ped, 7, data["accessory"].item, 0, 2)
-    SetPedComponentVariation(ped, 7, data["accessory"].item, data["accessory"].texture, 0)
+    SetPedComponentVariation(ped, 7, data["accessory"].item,
+                             data["accessory"].texture, 0)
 
     -- Bag
     SetPedComponentVariation(ped, 5, data["bag"].item, 0, 2)
@@ -1787,7 +1692,8 @@ AddEventHandler('qb-clothing:client:loadPlayerClothing', function(data, ped)
 
     -- Bracelet
     if data["bracelet"].item ~= -1 and data["bracelet"].item ~= 0 then
-        SetPedPropIndex(ped, 7, data["bracelet"].item, data["bracelet"].texture, true)
+        SetPedPropIndex(ped, 7, data["bracelet"].item, data["bracelet"].texture,
+                        true)
     else
         ClearPedProp(ped, 7)
     end
@@ -1799,7 +1705,8 @@ AddEventHandler('qb-clothing:client:loadPlayerClothing', function(data, ped)
     end
 
     if data["moles"].item ~= -1 and data["moles"].item ~= 0 then
-        SetPedHeadOverlay(ped, 9, data['moles'].item, (data['moles'].texture / 10))
+        SetPedHeadOverlay(ped, 9, data['moles'].item,
+                          (data['moles'].texture / 10))
     else
 
     end
@@ -1814,7 +1721,7 @@ AddEventHandler('qb-clothing:client:loadPlayerClothing', function(data, ped)
     SetPedFaceFeature(ped, 7, (data['eyebrown_forward'].item / 10))
     SetPedFaceFeature(ped, 8, (data['cheek_1'].item / 10))
     SetPedFaceFeature(ped, 9, (data['cheek_2'].item / 10))
-    SetPedFaceFeature(ped, 10,(data['cheek_3'].item / 10))
+    SetPedFaceFeature(ped, 10, (data['cheek_3'].item / 10))
     SetPedFaceFeature(ped, 11, (data['eye_opening'].item / 10))
     SetPedFaceFeature(ped, 12, (data['lips_thickness'].item / 10))
     SetPedFaceFeature(ped, 13, (data['jaw_bone_width'].item / 10))
@@ -1829,11 +1736,9 @@ end)
 
 function typeof(var)
     local _type = type(var);
-    if(_type ~= "table" and _type ~= "userdata") then
-        return _type;
-    end
+    if (_type ~= "table" and _type ~= "userdata") then return _type; end
     local _meta = getmetatable(var);
-    if(_meta ~= nil and _meta._NAME ~= nil) then
+    if (_meta ~= nil and _meta._NAME ~= nil) then
         return _meta._NAME;
     else
         return _type;
@@ -1851,55 +1756,54 @@ AddEventHandler('qb-clothing:client:loadOutfit', function(oData)
     for k, v in pairs(data) do
         skinData[k].item = data[k].item
         skinData[k].texture = data[k].texture
-
-        -- To secure backwards compability for facemixing
-        if data[k].shapeMix then
-            skinData[k].shapeMix = data[k].shapeMix
-        end
-
-        if data[k].skinMix then
-            skinData[k].skinMix = data[k].skinMix
-        end
     end
 
     -- Pants
     if data["pants"] ~= nil then
-        SetPedComponentVariation(ped, 4, data["pants"].item, data["pants"].texture, 0)
+        SetPedComponentVariation(ped, 4, data["pants"].item,
+                                 data["pants"].texture, 0)
     end
 
     -- Arms
     if data["arms"] ~= nil then
-        SetPedComponentVariation(ped, 3, data["arms"].item, data["arms"].texture, 0)
+        SetPedComponentVariation(ped, 3, data["arms"].item,
+                                 data["arms"].texture, 0)
     end
 
     -- T-Shirt
     if data["t-shirt"] ~= nil then
-        SetPedComponentVariation(ped, 8, data["t-shirt"].item, data["t-shirt"].texture, 0)
+        SetPedComponentVariation(ped, 8, data["t-shirt"].item,
+                                 data["t-shirt"].texture, 0)
     end
 
     -- Vest
     if data["vest"] ~= nil then
-        SetPedComponentVariation(ped, 9, data["vest"].item, data["vest"].texture, 0)
+        SetPedComponentVariation(ped, 9, data["vest"].item,
+                                 data["vest"].texture, 0)
     end
 
     -- Torso 2
     if data["torso2"] ~= nil then
-        SetPedComponentVariation(ped, 11, data["torso2"].item, data["torso2"].texture, 0)
+        SetPedComponentVariation(ped, 11, data["torso2"].item,
+                                 data["torso2"].texture, 0)
     end
 
     -- Shoes
     if data["shoes"] ~= nil then
-        SetPedComponentVariation(ped, 6, data["shoes"].item, data["shoes"].texture, 0)
+        SetPedComponentVariation(ped, 6, data["shoes"].item,
+                                 data["shoes"].texture, 0)
     end
 
     -- Bag
     if data["bag"] ~= nil then
-        SetPedComponentVariation(ped, 5, data["bag"].item, data["bag"].texture, 0)
+        SetPedComponentVariation(ped, 5, data["bag"].item, data["bag"].texture,
+                                 0)
     end
 
     -- Badge
     if data["badge"] ~= nil then
-        SetPedComponentVariation(ped, 10, data["decals"].item, data["decals"].texture, 0)
+        SetPedComponentVariation(ped, 10, data["decals"].item,
+                                 data["decals"].texture, 0)
     end
 
     -- Accessory
@@ -1907,7 +1811,8 @@ AddEventHandler('qb-clothing:client:loadOutfit', function(oData)
         if QBCore.Functions.GetPlayerData().metadata["tracker"] then
             SetPedComponentVariation(ped, 7, 13, 0, 0)
         else
-            SetPedComponentVariation(ped, 7, data["accessory"].item, data["accessory"].texture, 0)
+            SetPedComponentVariation(ped, 7, data["accessory"].item,
+                                     data["accessory"].texture, 0)
         end
     else
         if QBCore.Functions.GetPlayerData().metadata["tracker"] then
@@ -1919,12 +1824,14 @@ AddEventHandler('qb-clothing:client:loadOutfit', function(oData)
 
     -- Mask
     if data["mask"] ~= nil then
-        SetPedComponentVariation(ped, 1, data["mask"].item, data["mask"].texture, 0)
+        SetPedComponentVariation(ped, 1, data["mask"].item,
+                                 data["mask"].texture, 0)
     end
 
     -- Bag
     if data["bag"] ~= nil then
-        SetPedComponentVariation(ped, 5, data["bag"].item, data["bag"].texture, 0)
+        SetPedComponentVariation(ped, 5, data["bag"].item, data["bag"].texture,
+                                 0)
     end
 
     -- Hat
@@ -1939,7 +1846,8 @@ AddEventHandler('qb-clothing:client:loadOutfit', function(oData)
     -- Glass
     if data["glass"] ~= nil then
         if data["glass"].item ~= -1 and data["glass"].item ~= 0 then
-            SetPedPropIndex(ped, 1, data["glass"].item, data["glass"].texture, true)
+            SetPedPropIndex(ped, 1, data["glass"].item, data["glass"].texture,
+                            true)
         else
             ClearPedProp(ped, 1)
         end
@@ -1955,151 +1863,167 @@ AddEventHandler('qb-clothing:client:loadOutfit', function(oData)
     end
 
     if oData.outfitName ~= nil then
-        QBCore.Functions.Notify("You have chosen "..oData.outfitName.."! Press Confirm to confirm outfit.")
+        QBCore.Functions.Notify("You have chosen " .. oData.outfitName ..
+                                    "! Press Confirm to confirm outfit.")
     end
 end)
 
 local faceProps = {
-	[1] = { ["Prop"] = -1, ["Texture"] = -1 },
-	[2] = { ["Prop"] = -1, ["Texture"] = -1 },
-	[3] = { ["Prop"] = -1, ["Texture"] = -1 },
-	[4] = { ["Prop"] = -1, ["Palette"] = -1, ["Texture"] = -1 }, -- this is actually a pedtexture variations, not a prop
-	[5] = { ["Prop"] = -1, ["Palette"] = -1, ["Texture"] = -1 }, -- this is actually a pedtexture variations, not a prop
-	[6] = { ["Prop"] = -1, ["Palette"] = -1, ["Texture"] = -1 }, -- this is actually a pedtexture variations, not a prop
+    [1] = {["Prop"] = -1, ["Texture"] = -1},
+    [2] = {["Prop"] = -1, ["Texture"] = -1},
+    [3] = {["Prop"] = -1, ["Texture"] = -1},
+    [4] = {["Prop"] = -1, ["Palette"] = -1, ["Texture"] = -1}, -- this is actually a pedtexture variations, not a prop
+    [5] = {["Prop"] = -1, ["Palette"] = -1, ["Texture"] = -1}, -- this is actually a pedtexture variations, not a prop
+    [6] = {["Prop"] = -1, ["Palette"] = -1, ["Texture"] = -1} -- this is actually a pedtexture variations, not a prop
 }
 
-function loadAnimDict( dict )
-    while ( not HasAnimDictLoaded( dict ) ) do
-        RequestAnimDict( dict )
-        Citizen.Wait( 5 )
+function loadAnimDict(dict)
+    while (not HasAnimDictLoaded(dict)) do
+        RequestAnimDict(dict)
+        Citizen.Wait(5)
     end
 end
 
 RegisterNetEvent("qb-clothing:client:adjustfacewear")
-AddEventHandler("qb-clothing:client:adjustfacewear",function(type)
+AddEventHandler("qb-clothing:client:adjustfacewear", function(type)
     if QBCore.Functions.GetPlayerData().metadata["ishandcuffed"] then return end
-	removeWear = not removeWear
-	local AnimSet = "none"
-	local AnimationOn = "none"
-	local AnimationOff = "none"
-	local PropIndex = 0
+    removeWear = not removeWear
+    local AnimSet = "none"
+    local AnimationOn = "none"
+    local AnimationOff = "none"
+    local PropIndex = 0
 
-	local AnimSet = "mp_masks@on_foot"
-	local AnimationOn = "put_on_mask"
-	local AnimationOff = "put_on_mask"
+    local AnimSet = "mp_masks@on_foot"
+    local AnimationOn = "put_on_mask"
+    local AnimationOff = "put_on_mask"
 
-	faceProps[6]["Prop"] = GetPedDrawableVariation(PlayerPedId(), 0)
-	faceProps[6]["Palette"] = GetPedPaletteVariation(PlayerPedId(), 0)
-	faceProps[6]["Texture"] = GetPedTextureVariation(PlayerPedId(), 0)
+    faceProps[6]["Prop"] = GetPedDrawableVariation(PlayerPedId(), 0)
+    faceProps[6]["Palette"] = GetPedPaletteVariation(PlayerPedId(), 0)
+    faceProps[6]["Texture"] = GetPedTextureVariation(PlayerPedId(), 0)
 
-	for i = 0, 3 do
-		if GetPedPropIndex(PlayerPedId(), i) ~= -1 then
-			faceProps[i+1]["Prop"] = GetPedPropIndex(PlayerPedId(), i)
-		end
-		if GetPedPropTextureIndex(PlayerPedId(), i) ~= -1 then
-			faceProps[i+1]["Texture"] = GetPedPropTextureIndex(PlayerPedId(), i)
-		end
-	end
+    for i = 0, 3 do
+        if GetPedPropIndex(PlayerPedId(), i) ~= -1 then
+            faceProps[i + 1]["Prop"] = GetPedPropIndex(PlayerPedId(), i)
+        end
+        if GetPedPropTextureIndex(PlayerPedId(), i) ~= -1 then
+            faceProps[i + 1]["Texture"] =
+                GetPedPropTextureIndex(PlayerPedId(), i)
+        end
+    end
 
-	if GetPedDrawableVariation(PlayerPedId(), 1) ~= -1 then
-		faceProps[4]["Prop"] = GetPedDrawableVariation(PlayerPedId(), 1)
-		faceProps[4]["Palette"] = GetPedPaletteVariation(PlayerPedId(), 1)
-		faceProps[4]["Texture"] = GetPedTextureVariation(PlayerPedId(), 1)
-	end
+    if GetPedDrawableVariation(PlayerPedId(), 1) ~= -1 then
+        faceProps[4]["Prop"] = GetPedDrawableVariation(PlayerPedId(), 1)
+        faceProps[4]["Palette"] = GetPedPaletteVariation(PlayerPedId(), 1)
+        faceProps[4]["Texture"] = GetPedTextureVariation(PlayerPedId(), 1)
+    end
 
-	if GetPedDrawableVariation(PlayerPedId(), 11) ~= -1 then
-		faceProps[5]["Prop"] = GetPedDrawableVariation(PlayerPedId(), 11)
-		faceProps[5]["Palette"] = GetPedPaletteVariation(PlayerPedId(), 11)
-		faceProps[5]["Texture"] = GetPedTextureVariation(PlayerPedId(), 11)
-	end
+    if GetPedDrawableVariation(PlayerPedId(), 11) ~= -1 then
+        faceProps[5]["Prop"] = GetPedDrawableVariation(PlayerPedId(), 11)
+        faceProps[5]["Palette"] = GetPedPaletteVariation(PlayerPedId(), 11)
+        faceProps[5]["Texture"] = GetPedTextureVariation(PlayerPedId(), 11)
+    end
 
-	if type == 1 then
-		PropIndex = 0
-	elseif type == 2 then
-		PropIndex = 1
+    if type == 1 then
+        PropIndex = 0
+    elseif type == 2 then
+        PropIndex = 1
 
-		AnimSet = "clothingspecs"
-		AnimationOn = "take_off"
-		AnimationOff = "take_off"
+        AnimSet = "clothingspecs"
+        AnimationOn = "take_off"
+        AnimationOff = "take_off"
 
-	elseif type == 3 then
-		PropIndex = 2
-	elseif type == 4 then
-		PropIndex = 1
-		if removeWear then
-			AnimSet = "missfbi4"
-			AnimationOn = "takeoff_mask"
-			AnimationOff = "takeoff_mask"
-		end
-	elseif type == 5 then
-		PropIndex = 11
-		AnimSet = "oddjobs@basejump@ig_15"
-		AnimationOn = "puton_parachute"
-		AnimationOff = "puton_parachute"
-		--mp_safehouseshower@male@ male_shower_idle_d_towel
-		--mp_character_creation@customise@male_a drop_clothes_a
-		--oddjobs@basejump@ig_15 puton_parachute_bag
-	end
+    elseif type == 3 then
+        PropIndex = 2
+    elseif type == 4 then
+        PropIndex = 1
+        if removeWear then
+            AnimSet = "missfbi4"
+            AnimationOn = "takeoff_mask"
+            AnimationOff = "takeoff_mask"
+        end
+    elseif type == 5 then
+        PropIndex = 11
+        AnimSet = "oddjobs@basejump@ig_15"
+        AnimationOn = "puton_parachute"
+        AnimationOff = "puton_parachute"
+        -- mp_safehouseshower@male@ male_shower_idle_d_towel
+        -- mp_character_creation@customise@male_a drop_clothes_a
+        -- oddjobs@basejump@ig_15 puton_parachute_bag
+    end
 
-	loadAnimDict( AnimSet )
-	if type == 5 then
-		if removeWear then
-			SetPedComponentVariation(PlayerPedId(), 3, 2, faceProps[6]["Texture"], faceProps[6]["Palette"])
-		end
-	end
-	if removeWear then
-		TaskPlayAnim( PlayerPedId(), AnimSet, AnimationOff, 4.0, 3.0, -1, 49, 1.0, 0, 0, 0 )
-		Citizen.Wait(500)
-		if type ~= 5 then
-			if type == 4 then
-				SetPedComponentVariation(PlayerPedId(), PropIndex, -1, -1, -1)
-			else
-				if type ~= 2 then
-					ClearPedProp(PlayerPedId(), tonumber(PropIndex))
-				end
-			end
-		end
-	else
-		TaskPlayAnim( PlayerPedId(), AnimSet, AnimationOn, 4.0, 3.0, -1, 49, 1.0, 0, 0, 0 )
-		Citizen.Wait(500)
-		if type ~= 5 and type ~= 2 then
-			if type == 4 then
-				SetPedComponentVariation(PlayerPedId(), PropIndex, faceProps[type]["Prop"], faceProps[type]["Texture"], faceProps[type]["Palette"])
-			else
-				SetPedPropIndex( PlayerPedId(), tonumber(PropIndex), tonumber(faceProps[PropIndex+1]["Prop"]), tonumber(faceProps[PropIndex+1]["Texture"]), false)
-			end
-		end
-	end
-	if type == 5 then
-		if not removeWear then
-			SetPedComponentVariation(PlayerPedId(), 3, 1, faceProps[6]["Texture"], faceProps[6]["Palette"])
-			SetPedComponentVariation(PlayerPedId(), PropIndex, faceProps[type]["Prop"], faceProps[type]["Texture"], faceProps[type]["Palette"])
-		else
-			SetPedComponentVariation(PlayerPedId(), PropIndex, -1, -1, -1)
-		end
-		Citizen.Wait(1800)
-	end
-	if type == 2 then
-		Citizen.Wait(600)
-		if removeWear then
-			ClearPedProp(PlayerPedId(), tonumber(PropIndex))
-		end
+    loadAnimDict(AnimSet)
+    if type == 5 then
+        if removeWear then
+            SetPedComponentVariation(PlayerPedId(), 3, 2,
+                                     faceProps[6]["Texture"],
+                                     faceProps[6]["Palette"])
+        end
+    end
+    if removeWear then
+        TaskPlayAnim(PlayerPedId(), AnimSet, AnimationOff, 4.0, 3.0, -1, 49,
+                     1.0, 0, 0, 0)
+        Citizen.Wait(500)
+        if type ~= 5 then
+            if type == 4 then
+                SetPedComponentVariation(PlayerPedId(), PropIndex, -1, -1, -1)
+            else
+                if type ~= 2 then
+                    ClearPedProp(PlayerPedId(), tonumber(PropIndex))
+                end
+            end
+        end
+    else
+        TaskPlayAnim(PlayerPedId(), AnimSet, AnimationOn, 4.0, 3.0, -1, 49, 1.0,
+                     0, 0, 0)
+        Citizen.Wait(500)
+        if type ~= 5 and type ~= 2 then
+            if type == 4 then
+                SetPedComponentVariation(PlayerPedId(), PropIndex,
+                                         faceProps[type]["Prop"],
+                                         faceProps[type]["Texture"],
+                                         faceProps[type]["Palette"])
+            else
+                SetPedPropIndex(PlayerPedId(), tonumber(PropIndex),
+                                tonumber(faceProps[PropIndex + 1]["Prop"]),
+                                tonumber(faceProps[PropIndex + 1]["Texture"]),
+                                false)
+            end
+        end
+    end
+    if type == 5 then
+        if not removeWear then
+            SetPedComponentVariation(PlayerPedId(), 3, 1,
+                                     faceProps[6]["Texture"],
+                                     faceProps[6]["Palette"])
+            SetPedComponentVariation(PlayerPedId(), PropIndex,
+                                     faceProps[type]["Prop"],
+                                     faceProps[type]["Texture"],
+                                     faceProps[type]["Palette"])
+        else
+            SetPedComponentVariation(PlayerPedId(), PropIndex, -1, -1, -1)
+        end
+        Citizen.Wait(1800)
+    end
+    if type == 2 then
+        Citizen.Wait(600)
+        if removeWear then
+            ClearPedProp(PlayerPedId(), tonumber(PropIndex))
+        end
 
-		if not removeWear then
-			Citizen.Wait(140)
-			SetPedPropIndex( PlayerPedId(), tonumber(PropIndex), tonumber(faceProps[PropIndex+1]["Prop"]), tonumber(faceProps[PropIndex+1]["Texture"]), false)
-		end
-	end
-	if type == 4 and removeWear then
-		Citizen.Wait(1200)
-	end
-	ClearPedTasks(PlayerPedId())
+        if not removeWear then
+            Citizen.Wait(140)
+            SetPedPropIndex(PlayerPedId(), tonumber(PropIndex),
+                            tonumber(faceProps[PropIndex + 1]["Prop"]),
+                            tonumber(faceProps[PropIndex + 1]["Texture"]), false)
+        end
+    end
+    if type == 4 and removeWear then Citizen.Wait(1200) end
+    ClearPedTasks(PlayerPedId())
 end)
 
 ------------------------------refreshskin-------------------
 
 RegisterCommand("refreshskin", function(source, args, rawCommand)
-
 
     local playerPed = PlayerPedId()
     local maxhealth = GetEntityMaxHealth(playerPed)
@@ -2116,17 +2040,17 @@ function reloadSkin(health)
     local gender = QBCore.Functions.GetPlayerData().charinfo.gender
 
     if gender == 1 then -- Gender is ONE for FEMALE
-    model = GetHashKey("mp_f_freemode_01") -- Female Model
-    else 
-    model = GetHashKey("mp_m_freemode_01") -- Male Model
-    end 
+        model = GetHashKey("mp_f_freemode_01") -- Female Model
+    else
+        model = GetHashKey("mp_m_freemode_01") -- Male Model
+    end
 
     RequestModel(model)
 
     SetPlayerModel(PlayerId(), model)
     SetModelAsNoLongerNeeded(model)
     Citizen.Wait(1000) -- Safety Delay
-    
+
     TriggerServerEvent("qb-clothes:loadPlayerSkin") -- LOADING PLAYER'S CLOTHES
     TriggerServerEvent("qb-clothing:loadPlayerSkin") -- LOADING PLAYER'S CLOTHES - Event 2
 

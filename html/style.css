@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 .container {
     height: 100vh;
 }
@@ -16,7 +17,7 @@
     width: 38vh;
     background-color: rgb(23 23 23 / 80%);
     right: -25vw;
-    border-radius: 1.3vh;
+    border-radius:1.3vh;
 }
 
 .clothing-menu-header {
@@ -46,7 +47,7 @@
     color: #dc143c;
 }
 
-.clothing-menu-header-btn>p {
+.clothing-menu-header-btn > p {
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     font-size: 1vh;
@@ -82,7 +83,7 @@
     cursor: pointer;
 }
 
-.clothing-menu-header-camera-btn>i {
+.clothing-menu-header-camera-btn > i {
     font-size: 1.4vh;
 }
 
@@ -128,7 +129,7 @@
     cursor: pointer;
 }
 
-.clothing-menu-outfit-option-button>p {
+.clothing-menu-outfit-option-button > p {
     color: #ededed;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
@@ -154,7 +155,7 @@
     cursor: pointer;
 }
 
-.clothing-menu-myOutfit-option-button>p {
+.clothing-menu-myOutfit-option-button > p {
     color: #ededed;
     font-weight: bold;
     text-transform: uppercase;
@@ -180,7 +181,7 @@
     background-color: #444444;
 }
 
-.clothing-menu-myOutfit-option-button-remove>p {
+.clothing-menu-myOutfit-option-button-remove > p {
     color: #ededed;
     font-weight: bold;
     text-transform: uppercase;
@@ -225,18 +226,22 @@
     overflow-y: scroll !important;
 }
 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05);
-    background-color: rgb(245 245 245 / 0%);
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.05);
+	background-color: rgb(245 245 245 / 0%);
 }
 
-::-webkit-scrollbar {
-    width: 0.6vh;
-    background-color: rgb(245 245 245 / 0%);
+::-webkit-scrollbar
+{
+	width: 0.6vh;
+	background-color: rgb(245 245 245 / 0%);
 }
 
-::-webkit-scrollbar-thumb {
-    background-color: #dc143c;
+::-webkit-scrollbar-thumb
+{
+	background-color: #dc143c;
 }
 
 .clothing-menu-option {
@@ -253,7 +258,7 @@
     margin-bottom: -15px;
 }
 
-.clothing-menu-option-header>p {
+.clothing-menu-option-header > p {
     text-align: center;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
@@ -336,7 +341,7 @@
     color: #ededed;
 }
 
-.clothing-menu-option-item-header>p {
+.clothing-menu-option-item-header > p {
     font-family: 'Poppins', sans-serif;
     padding: 0.2vh;
 }
@@ -362,7 +367,7 @@
     cursor: pointer;
 }
 
-.clothing-menu-option-button>p {
+.clothing-menu-option-button > p {
     line-height: 3.1vh;
     font-size: 1.3vh;
     font-family: 'Poppins', sans-serif;
@@ -381,6 +386,7 @@
     margin: 0 auto;
     top: 40%;
     border-radius: 0.7vh;
+
 }
 
 .clothing-menu-save-outfit-name-buttons {
@@ -409,7 +415,7 @@
     cursor: pointer;
 }
 
-.clothing-menu-save-outfit-name-button>p {
+.clothing-menu-save-outfit-name-button > p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1vh;
     letter-spacing: 0.1vh;
@@ -426,7 +432,7 @@
     line-height: 5vh;
 }
 
-.clothing-menu-save-outfit-name-header>p {
+.clothing-menu-save-outfit-name-header > p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.7vh;
     letter-spacing: 0.1vh;
@@ -495,7 +501,7 @@
     cursor: pointer;
 }
 
-.change-camera-button>i {
+.change-camera-button > i {
     font-size: 3vh;
     color: #ededed;
     line-height: 5.5vh;
@@ -513,68 +519,11 @@
     border-bottom-right-radius: .8vh;
 }
 
-.change-camera-footer>p {
+.change-camera-footer > p {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 0.8vh;
     text-transform: uppercase;
     color: #ededed;
     letter-spacing: 0.1vh;
-}
-
-.slidecontainer {
-    width: 100%;
-}
-
-.slider {
-    appearance: none;
-    width: 100%;
-    height: 25px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    transition: opacity .2s;
-}
-
-.slider {
-    position: absolute;
-    left: 0!important;
-    top: 1.5em!important;
-}
-
-.slider:hover {
-    opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: #dc143c;
-    cursor: pointer;
-}
-
-.facemix-labels {
-    display: block;
-}
-
-.facemix-label-left {
-    font-size: xx-small;
-    position: absolute;
-    text-transform: uppercase;
-    letter-spacing: 0.1vh;
-    color: #ededed;
-    bottom: 0px;
-    left: 0px;
-}
-
-.facemix-label-right {
-    font-size: xx-small;
-    position: absolute;
-    text-transform: uppercase;
-    letter-spacing: 0.1vh;
-    color: #ededed;
-    bottom: 0px;
-    right: 0px;
 }
