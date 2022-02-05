@@ -537,6 +537,8 @@ Config.ClothingRooms = {
     --[4] = {requiredJob = "ambulance", coords = vector3(338.70, 659.61, 14.71), cameraLocation = vector4(339.27,  661.63,  14.71,  315.5)},    
     --[5] = {requiredJob = "ambulance", coords = vector3(-1098.45, 1751.71, 23.35), cameraLocation = vector4(-1097.15, 1750.19,  23.35, 38.70)},    
     [4] = {requiredJob = "police", coords = vector3(386.54, 799.68, 187.46), cameraLocation = vector4(386.11, 797.76, 187.46, 347.79)},
+    [5] = {requiredJob = "police", coords = vector3(853.64, -1314.0, 28.24), cameraLocation = vector4(853.65, -1311.59, 28.24, 180.74)},
+    [6] = {requiredJob = "police", coords = vector3(1841.34, 3681.62, 34.19), cameraLocation = vector4(1839.22, 3680.28, 34.19, 299.9)},
 }
 
 Config.Outfits = {
